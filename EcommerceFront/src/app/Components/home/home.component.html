@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="section1">
+        <h1 class="position-absolute text-center" style="bottom: 35%; left:60%;font-family: 'Quicksand', sans-serif; font-size: 50pxpx;">Eco-responsible shoes for a better future</h1>
+    </div>
+    <div class="section2 text-center">
+        <p>
+            Shop the latest sales of Valency you can find the hottest sneaker drops from top brands like Nike, adidas, Jordan, Under Armour & more from Finish Line.
+            In an ethical approach, we expose only eco-responsible sneakers from different suppliers. With low environmental impact, here you will find ethical sneakers for women and men made with natural and recycled materials.
+        </p>
+    </div>
+    <div class="section3">
+        <div class="row my-5">
+            <div class="col-3" *ngFor = "let p of randomProducts">
+                <div class="card">
+                    <img class="card-img-top" src="{{p.image}}" alt="Card image cap" width="100%" height="350px">
+                    <div class="card-body">
+                      <h4 class="card-title">{{p.productName}}</h4>
+                        <p class="card-text mr-auto" style="font-family: 'Work Sans', sans-serif;">Price : {{p.productPrice}} Tnd</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+      

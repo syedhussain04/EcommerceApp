@@ -1,0 +1,29 @@
+    <nav class="navbar navbar-expand">
+        <img routerLink="/home" src="../../../assets/Images/logo.PNG" height="50px">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav" [ngClass]="{menuClass: testVar}">
+            <li class="nav-item active">
+              <a class="nav-link" routerLink="">Home</a>
+            </li>
+            <li class="nav-item dropdown text-center" >
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Products
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+                <a class="dropdown-item text-center" *ngFor = "let c of categories" (click)="submitCategory(c.categoryName)" >{{c.categoryName}}</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#target">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-flex p-2">
+          <a class="navbar-icons" routerLink="/whish-list"><i class="fa fa-heart-o" style="color: #fff;" aria-hidden="true"></i></a>
+          <a class="navbar-icons" routerLink="/cart" (click)="shoppingCart()"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          <a href="#" class="navbar-icons" id="menu-icon" (click)="OpenMenu()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+        </div>
+      </nav>

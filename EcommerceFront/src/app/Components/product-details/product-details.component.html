@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row m-0" style="background: #f8f4ec;">
+        <div class="col-md-6 px-0 text-center">
+            <img src="{{productImage}}" width="100%" height="100%">
+        </div>
+        <div class="col-md-6 mt-5 pl-5">
+        <h2 class="product-title">{{productName}}</h2>
+        <h4 class="product-price mb-0 my-4">{{ productPrice}} Tnd</h4>
+        <div class="product-description">
+            <h5 style="font-family: 'Quicksand', sans-serif;">{{productDescrip}}</h5>
+        </div>
+        <div class="d-flex align-items-center my-5">
+            <a (click)="decrementQte()"><i class="fas fa-minus mx-3"></i></a>
+            <span>{{qte}}</span>
+            <a (click)="incrementQte()"><i class="fas fa-plus mx-3"></i></a>
+            <select class="form-control ml-auto mr-3 size-selection">
+                <option >37</option>
+                <option>38</option>
+                <option>39</option>
+              </select>
+        </div>
+        <div class="btn-group d-flex">
+            <button type="button" class="btn mr-4 add-to-cart-btn" (click)="addToCart(product.productId)">Add To Cart</button>
+            <button type="button" class="btn add-to-wish-btn" (click)="addToWishList(product.productId)">Add To wishList</button>
+        </div>
+        </div>
+    </div>
+    <div class="alert" [ngClass]="{'cart-alert':trigeredC}">
+        Product Added to cart
+    </div>
+    <div class="alert" [ngClass]="{'wishList-alert':trigeredW}">
+        Product Added to wishList
+    </div>
+</div>

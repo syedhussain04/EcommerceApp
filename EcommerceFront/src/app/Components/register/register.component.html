@@ -1,0 +1,172 @@
+<form class="form" #f="ngForm" (ngSubmit)="f.valid && onSubmit(f.value) ; f.reset()"
+    [appMatchPassword]="['password','confirmPassword']" novalidate autocomplete="off">
+    <h3 class="mx-auto details-title">Customer details</h3>
+    <hr class="mb-5">
+    <div class="row">
+        <div class="col">
+            <div class="form-group mb-1 mt-2">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" required name="firstName" #fn="ngModel" ngModel>
+            </div>
+            <div class="error-msg">
+                <div class="text-danger" *ngIf="fn.touched">
+                    <div *ngIf="fn.errors?.['required']">
+                        Field required
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mb-1 mt-2">
+                <label class="form-label">Email</label>
+                <input type="text" class="form-control" required email name="email" #email="ngModel" ngModel>
+            </div>
+            <div class="error-msg">
+                <div class="text-danger" *ngIf="email.touched">
+                    <div *ngIf="email.errors?.['required']">
+                        Field required
+                    </div>
+                    <div *ngIf="email.errors?.['email']">
+                        Enter a valid email address
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group mb-1 mt-2">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" required name="lastName" #ln="ngModel" ngModel>
+            </div>
+            <div class="error-msg">
+                <div class="text-danger" *ngIf="ln.touched">
+                    <div *ngIf=" ln.errors?.['required']">
+                        Field required
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mb-1 mt-2">
+                <label class="form-label">Phone Number</label>
+                <input type="text" class="form-control" required pattern="^(0|[1-9][0-9]*)$" maxlength="8" minlength="8"
+                    name="phoneNumber" #phoneNumber="ngModel" ngModel>
+            </div>
+            <div class="error-msg">
+                <div class="text-danger" *ngIf="phoneNumber.touched">
+                    <div *ngIf="phoneNumber.errors?.['required']">
+                        Field required
+                    </div>
+                    <div *ngIf="phoneNumber.errors?.['pattern']">
+                        Enter valid phone number
+                    </div>
+                    <div *ngIf="phoneNumber.errors?.['minlength']">
+                        Phone number must be at leat 8 characters
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 class="mx-auto details-title">Bill details</h3>
+    <hr class="mb-5">
+    <div class="row">
+        <div class="col">
+            <div class="form-group mb-1 mt-2">
+                <label class="form-label">Address</label>
+                <input type="text" class="form-control" required name="address" #ad="ngModel" ngModel>
+            </div>
+            <div class="error-msg">
+                <div class="text-danger" *ngIf="ad.touched">
+                    <div *ngIf="ad.errors?.['required']">
+                        Field required
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mb-1 mt-2">
+                <label class="form-label">Town</label>
+                <input type="text" class="form-control" required name="town" #to="ngModel" ngModel>
+            </div>
+            <div class="error-msg">
+                <div class="text-danger" *ngIf="to.touched">
+                    <div *ngIf="to.errors?.['required']">
+                        Field required
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group mb-1 mt-2">
+                <label class="form-label">Zip Code</label>
+                <input type="text" class="form-control" required pattern="^(0|[1-9][0-9]*)$" maxlength="4" minlength="4"
+                    name="zipCode" #zip="ngModel" ngModel>
+            </div>
+            <div class="error-msg">
+                <div class="text-danger" *ngIf="zip.touched">
+                    <div *ngIf="zip.errors?.['required']">
+                        Field required
+                    </div>
+                    <div *ngIf="zip.errors?.['pattern']">
+                        Enter valid zip code
+                    </div>
+                    <div *ngIf="zip.errors?.['minlength']">
+                        zip code must be at leat 4 characters
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 class="mx-auto details-title">Account details</h3>
+    <hr class="mb-5">
+    <div class="row">
+        <div class="col">
+            <div class="form-group mb-1 mt-2">
+                <label class="form-label">UserName</label>
+                <input type="text" class="form-control" required maxlength="20" minlength="3" name="userName"
+                    #un="ngModel" ngModel>
+            </div>
+            <div class="error-msg">
+                <div class="text-danger" *ngIf="un.touched">
+                    <div *ngIf="un.errors?.['required']">
+                        Field required
+                    </div>
+                    <div *ngIf="un.errors?.['minlength']">
+                        Username must be at least 3 characters
+                    </div>
+                </div>
+            </div>
+            <button type="submit" [disabled]="!f.valid" class="btn submit-btn " style="width: 100%;margin-top: 25px;" >Submit</button>
+        </div>
+        <div class="col">
+            <div class="form-group mb-1 mt-2">
+                <label class="form-label">PassWord</label>
+                <input type="password" class="form-control" required maxlength="8" minlength="8" appPasswordPattern
+                    name="password" #ps="ngModel" ngModel>
+            </div>
+            <div class="error-msg">
+                <div class="text-danger" *ngIf="ps.touched">
+                    <div *ngIf="ps.errors?.['required']">
+                        Field required
+                    </div>
+                    <div *ngIf="ps.errors?.['minlength']">
+                        Password must be at least 8 characters.
+                    </div>
+                    <div class="mb-5" *ngIf="ps.errors?.['invalidPassword']">
+                        Password should have at least 1 uppercase letter, 1 lowercase letter and 1 number
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mb-1 mt-3">
+                <label class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" name="confirmPassword" #confirmPassword="ngModel" required
+                    maxlength="8" ngModel />
+            </div>
+            <div class="error-msg">
+                <div class="text-danger" *ngIf="confirmPassword.touched">
+                    <div *ngIf="confirmPassword.errors?.['required']">
+                        Field required
+                    </div>
+                </div>
+                <div class="text-danger" *ngIf="confirmPassword.touched">
+                    <div *ngIf="confirmPassword.errors?.['passwordMismatch']">
+                        Passwords does not match
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

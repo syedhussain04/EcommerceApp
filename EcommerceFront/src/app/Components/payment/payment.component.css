@@ -1,0 +1,15 @@
+.submit-btn{
+    color: #fff;
+    font-size: 16px;
+    background: black;
+    width: 300px;
+    height: 60px;
+    border-radius: 2px;
+}
+.submit-btn:hover{
+    opacity: 0.8;
+}
+img{
+    border-radius: 10px;
+    border: 1px solid #008dff;
+}

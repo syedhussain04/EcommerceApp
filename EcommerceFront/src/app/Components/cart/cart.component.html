@@ -1,0 +1,42 @@
+<div *ngIf="isEmpty; else contentBlock">
+   <div class="container text-center">
+    <h2>Nothing in your cart yet !</h2>
+   </div>
+</div>
+
+<ng-template #contentBlock>
+    <div class="container">
+        <table class="table cartTable">
+            <thead>
+                <tr><th></th><th></th><th>Product</th><th>Price</th><th>Quantity</th><th>SubTotal</th></tr>
+            </thead>
+            <tbody>
+                <tr class="cartTable-row" *ngFor="let o of orderItems ; let i = index">
+                    <td ><i class="fa fa-close " (click)="removeProduct(o.product.productId)"></i></td>
+                    <td><img src="{{o.product.image}}"  alt="product image" width="100px" height="100px"></td>
+                    <td>{{o.product.productName}}</td>
+                    <td>{{o.product.productPrice}}</td>
+                    <td class="pl-5">{{o.qte}}</td>
+                    <td>{{SubTotalArray[i]}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row mt-5 justify-content-end">
+            <div class="col-md-6">
+                <h3 class="pl-2 pb-3 total">Baskek Totals</h3>
+                <table class="table totalTable">
+                    <tbody>
+                        <tr><td><h5>SubTotal</h5></td><td class="text-right">{{subTotalSum}}</td></tr>
+                        <tr style="background: #eeeeee7b;"><td><h5>Shipping</h5></td><td class="text-right">{{ShippingPrice}}</td></tr>
+                        <tr style="background: #EEEEEE;"><td><h5>Total</h5></td><td class="text-right">{{Total}}</td></tr>
+                    </tbody>
+                </table>
+                <button class="btn py-3 checkout-btn" routerLink="/payment">Proceed to checkout</button>
+            </div>
+        </div>
+    </div>
+    
+</ng-template>
+
+
+

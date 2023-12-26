@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 p-0 col-sm" *ngFor = "let p of products">
+      <div class="card">
+        <img class="card-img-top" (click)="showProductDetails(p.productName)" src="{{p.image}}" alt="Card image cap" width="100%" height="350px">
+        <div class="card-body">
+          <h4 class="card-title" (click)="showProductDetails(p.productName)">{{p.productName}}</h4>
+          <div class="d-flex">
+            <p class="card-text mr-auto" style="font-family: 'Work Sans', sans-serif;">Price : {{p.productPrice}} Tnd</p>
+            <a><i class=" fas fa-heart pull-right heart-icon" (click)="addToWishList(p.productId)"></i></a>
+            <!--<a><i class="mx-2 fas fa-shopping-cart pull-right"></i></a>-->
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

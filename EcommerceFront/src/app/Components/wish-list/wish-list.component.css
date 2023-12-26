@@ -1,0 +1,28 @@
+h3{
+    margin: 100px auto;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 34px;
+}
+table{
+    width: 90%;
+    margin: 5px auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+td{
+    border-top: 1px solid #cfa299;
+    border-bottom: 1px solid #cfa299;
+    vertical-align:middle;
+}
+.alert{
+    display: block;
+    position: relative;
+    top: 30px;
+    right: 20px;
+    /*background: rgba(233, 150, 122, 0.412) !important;*/
+    background: #b7a5a556 !important;
+    border-radius: 5px;
+    color: rgb(110, 106, 102);
+    transform: translateY(50px);
+    transition: all 1s;
+}

@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col-9 mt-2">
+            <app-register></app-register>
+        </div>
+        <div class="col-3 pt-1 px-0">
+            <h3 class="pl-3">Order Summary</h3>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>
+                            <h5>SubTotal</h5>
+                        </td>
+                        <td class="text-right">{{subTotalSum}}</td>
+                    </tr>
+                    <tr style="background: #eeeeee7b;">
+                        <td>
+                            <h5>Shipping</h5>
+                        </td>
+                        <td class="text-right">{{ShippingPrice}}</td>
+                    </tr>
+                    <tr style="background: #EEEEEE;">
+                        <td>
+                            <h5>Total</h5>
+                        </td>
+                        <td class="text-right">{{Total}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <form>
+                <div class=" py-2 d-flex justify-content-around">
+                    <input type="radio" name="payment-mode">
+                    <img src="../../../assets/Images/virement.png" width="150" height="70">
+                </div>
+            </form>
+            <button class="btn submit-btn" style="width:100%" (click)="postOrder()">Pass Order</button>
+        </div>
+    </div>
+</div>

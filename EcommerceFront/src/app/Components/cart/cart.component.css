@@ -1,0 +1,48 @@
+
+.container{
+    margin:100px auto;
+}
+
+thead th {
+    border-style: none;
+    font-size: 22px;
+    font-family: 'PT Sans Caption', sans-serif;
+}
+.cartTable td{
+    border-top: 1px solid rgb(64, 62, 62);
+    border-bottom: 1px solid rgb(64, 62, 62);
+    font-family: 'Quicksand', sans-serif;
+    vertical-align:middle;
+}
+.fa-close{
+    font-size: 24px;
+    color: rgb(71, 68, 68);
+    transition: all .3s ease-in;
+}
+.fa-close:hover{
+    color: rgba(71, 68, 68, 0.653);
+    transform: rotate(90deg)
+}
+
+.totalTable td{
+    border-style: none;
+    font-family: 'PT Sans Caption', sans-serif;
+}
+
+.total{
+border-bottom: 2px solid black;
+}
+
+.checkout-btn{
+width: 100%;
+background: black;
+color: #fff;
+font-family: 'Rubik', sans-serif;
+font-size: 22px;
+border-radius: 2px;
+}
+
+.checkout-btn:hover{
+    opacity: .8;
+    }
+    

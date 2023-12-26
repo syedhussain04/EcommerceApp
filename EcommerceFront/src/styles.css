@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  background: #eeeeee7b;
+  display: flex;
+  flex-direction: column;
+  /* or */
+  min-height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+ /* background: #0303036d;  */ /* color of the scroll thumb */
+  background: #4242426d; 
+  border-radius: 10px;   
+  margin: auto 2px;    /* roundness of the scroll thumb */ /* creates padding around scroll thumb */
+}

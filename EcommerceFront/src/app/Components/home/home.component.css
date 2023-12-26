@@ -1,0 +1,37 @@
+
+.section1 {
+    /* The image used */
+    background-image: url("../../../assets/Images/wshoes19.png");
+    min-height: 100vh; 
+    background-attachment: fixed;    
+    background-size: cover;
+}
+.card{
+    border-style: none;
+    border-radius: 1px;
+}
+.card-title{
+    white-space: nowrap;
+    max-width: 250px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: 'PT Sans Caption', sans-serif;
+    border: 1px;
+}
+.card-body{
+    background: #eeeeee7b;
+}
+.card img{
+    border-radius: 1px;
+}
+.card-text{
+    font-family: 'Work Sans', sans-serif;
+    color: rgb(154, 151, 148);
+}
+.section2{
+    padding: 10% 17%;
+}
+.section2 p{
+    font-size: 20px;
+}
+
