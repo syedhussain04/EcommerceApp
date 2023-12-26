@@ -1,18 +1,27 @@
-## Demo :
-https://user-images.githubusercontent.com/69457494/194152147-ac4aea14-7765-45bc-abbf-1aa76ee7c95a.mp4
-# About This Project
-This project is a simple e-commerce website powered by Angular on the frontend and Spring Boot for the backend.
-# Technologies :
-Backend 
-Java 
-Spring boot
-Spring data jpa
-Hibernate
-Mysql
-Frontend
-Angular
-Bootstrap
-# How to Run
-- Install MySQL server then create new schema « database_test »  and run script.sql, sql script can be found in SQL server it contains test data
-- For Backend configure application.properties with databse url, username and password then run spring boot application
-- For Frontend run npm install then ng serve, the frontend client will be running on localhost:4200
+# EcommerceFront
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
